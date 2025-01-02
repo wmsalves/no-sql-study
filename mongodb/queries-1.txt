@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+=======
+db.states.find()
+db.states.find().pretty()
+db.states.findOne()
+db.states.findOne({countryCode: "BH"})
+db.states.find({$or: [{countryCode: "BH"}, {countryCode: "SP"}]}).pretty()
+db.states.find({population: {$exists: true}}).pretty()
+db.states.find().skip(1).limit(2)
+db.states.count()
+db.states.find({countryCode: "SP"}, {name: 1, countryCode: 1, _id: 0})
+db.states.find({countryCode: "SP"}, {"cities.name": 1, _id: 0})
+>>>>>>> 7d5e012 (query commands.)
