@@ -1,0 +1,6 @@
+db.states.aggregate([
+    { $match: {"cities.name": "Uberlândia"} },
+    { $unwind: "$cities"},
+    { $match: {"cities.name": "Uberlândia"} },
+    { $project: {_id: "$cities._id"} }
+]).pretty()
