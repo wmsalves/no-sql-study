@@ -84,8 +84,8 @@ db.getCollection("routes").aggregate([
   },
   {
     $group: {
-      _id: "$airplane", // Agrupa por 'airplane'
-      totalCount: { $sum: 1 }, // Conta o número de documentos para cada 'airplane'
+        _id: "$airplane", // Group by 'airplane'
+        totalCount: { $sum: 1 }, // Counts the number of documents for each 'plane'
     },
   },
 ]);
