@@ -1,0 +1,31 @@
+States
+name = California, countryCode = CA, region = West
+    Cities
+    name = Los Angeles, area = 503, mayor = Karen Bass,population = 4000000
+    name = San Francisco,population = 883305
+    name = San Diego, distanceFromCapital = 120, population = 1423851
+
+Each City has the attribute _id <- ObjectId
+
+// Insertion into the database
+db.states.insert({
+    name: "California",
+    countryCode: "CA",
+    region: "West",
+    cities: [{
+        _id: ObjectId(),
+        name: "Los Angeles",
+        area: 503,
+        mayor: "Karen Bass",
+        population: 4000000
+    }, {
+        _id: ObjectId(),
+        name: "San Francisco",
+        population: 883305
+    }, {
+        _id: ObjectId(),
+        name: "San Diego",
+        distanceFromCapital: 120,
+        population: 1423851
+    }]
+})
