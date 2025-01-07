@@ -1,0 +1,16 @@
+    db.companies.insert({name: "Microsoft", stateId: ObjectId("5d8570683a77f90093cbd113")})
+    db.companies.insert({name: "Google", cityId: ObjectId("5d8570683a77f90093cbd112")})
+    db.companies.find().pretty()
+     
+    db.company.insert({
+        name: "California",
+        countryCode: "CA",
+        region: "West",
+        cities: [{
+            name: "Los Angeles",
+            area: 503,
+            population: 4000000
+        }]
+    })
+     
+    db.states.find().pretty()
