@@ -1,0 +1,16 @@
+db.states.insert({name: "California", countryCode: "CA", region: "West"})
+db.states.save({name: "Texas", countryCode: "TX", region: "South", population: 29000000})
+db.states.insert({
+    name: "New York",
+    countryCode: "NY",
+    region: "Northeast",
+    cities: [{
+        name: "Buffalo",
+        area: 52.5,
+        population: 261310
+    }]
+})
+
+db.states.find()
+db.states.find().pretty()
+db.help()
